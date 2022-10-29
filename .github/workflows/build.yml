@@ -1,0 +1,42 @@
+name: build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # - name: Cache dependencies
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: |
+      #       node_modules
+      #       */*/node_modules
+      #     key: ${{ runner.os }}-${{ hashFiles('**/package.json', './package.json') }}
+      #   id: cache
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install --prefer-offline
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Build
+        # run: npm run build -- --public-url https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: npm run build -- --public-url https://remarkablemark.org/${{ github.event.repository.name }}
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
