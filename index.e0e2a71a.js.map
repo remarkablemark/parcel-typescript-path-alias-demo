@@ -1,0 +1,1 @@
+{"mappings":"AAAmB,KAAIA,KAAgBC,QAAQC,OAAOF,EAAK,ECE3D,CAAI","sources":["src/utils/log.ts","src/app.ts"],"sourcesContent":["export const log = (...args: any[]) => console.log(...args);\n","import { log } from '~/src/utils';\n\nlog('Hello world!');\n"],"names":["args","console","log"],"version":3,"file":"index.e0e2a71a.js.map"}
