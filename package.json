@@ -9,6 +9,6 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "parcel": "2.8.3",
-    "typescript": "5.0.2"
+    "typescript": "5.0.3"
   }
 }
