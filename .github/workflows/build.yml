@@ -30,6 +30,9 @@ jobs:
       - name: Type check
         run: npm run type-check
 
+      - name: Run Jest tests
+        run: npm test
+
       - name: Build
         # run: npm run build -- --public-url https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: npm run build -- --public-url https://remarkablemark.org/${{ github.event.repository.name }}
