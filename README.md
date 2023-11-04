@@ -1,6 +1,6 @@
 # parcel-typescript-path-alias-demo
 
-[Parcel](https://parceljs.org/) [TypeScript](https://www.typescriptlang.org/) [path alias](https://parceljs.org/module_resolution.html#typescript-~-resolution) with [tilde specifiers](https://parceljs.org/features/dependency-resolution/#tilde-specifiers) demo. Inspired by [parcel-typescript-example](https://github.com/remarkablemark/parcel-typescript-example).
+[Parcel](https://parceljs.org/) [TypeScript](https://www.typescriptlang.org/) [path alias](https://parceljs.org/features/dependency-resolution/#paths) with [tilde specifiers](https://parceljs.org/features/dependency-resolution/#tilde-specifiers) demo. Inspired by [parcel-typescript-example](https://github.com/remarkablemark/parcel-typescript-example).
 
 ## Install
 
