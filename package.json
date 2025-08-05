@@ -9,8 +9,8 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "@types/jest": "29.5.14",
-    "jest": "29.7.0",
+    "@types/jest": "30.0.0",
+    "jest": "30.0.5",
     "parcel": "2.15.4",
     "ts-jest": "29.4.1",
     "ts-node": "10.9.2",
